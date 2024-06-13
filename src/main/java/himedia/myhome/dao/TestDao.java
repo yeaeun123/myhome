@@ -16,8 +16,22 @@ public class TestDao {
 		
 		//	목록 출력
 		list();
+		
+		//	회원 정보 출력
+		testGetUserByIdAndPassword("hong@hwalbin.org", "1234");
+		testGetUserByIdAndPassword("gildong@dooly.net", "whocares?");
 	}
 	
+	private static void testGetUserByIdAndPassword(String email, String password) {
+		
+		UsersDao dao = new UsersDaoOracleImpl("himedia", "himedia");
+		UserVo vo = dao.getUserByIdAndPassword(email, password);
+		
+		System.out.println("USER " + (vo == null ? "NOT FOUND": "FOUND"));
+		System.out.println("USER INFO:" + vo);
+		
+	}
+
 	private static void insert(String name, String password, String email, String gender) {
 		UsersDao dao = new UsersDaoOracleImpl("himedia", "himedia");
 		
