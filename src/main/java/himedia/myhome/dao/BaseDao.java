@@ -18,7 +18,7 @@ public abstract class BaseDao {
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			String dburl = "jdbc:oracle:thin:@localhost:1522:xe";
+			String dburl = "jdbc:oracle:thin:@localhost:1521:xe";
 			conn = DriverManager.getConnection(dburl, dbUser, dbPass);
 		} catch (ClassNotFoundException e) {
 			System.err.println("JDBC Driver를 로드하지 못했습니다.");
