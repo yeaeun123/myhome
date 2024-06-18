@@ -6,7 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>My Home: Join Form</title>
-<link type="text/css" rel="stylesheet" href="<%= request.getContextPath() %>/css/users.css" />
+<link type="text/css" rel="stylesheet" 
+href="<%= request.getContextPath() %>/css/users.css" />
 	
 </head>
 <body>

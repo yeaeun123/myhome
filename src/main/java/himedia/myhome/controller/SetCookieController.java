@@ -28,7 +28,7 @@ public class SetCookieController extends HttpServlet {
       // testCookie
       Cookie c = new Cookie("testCookie",
             URLEncoder.encode("Servlet에서 쿠키 저장을 명령합니다! SetCookie", "UTF-8"));
-      c.setMaxAge(24*60*60); // 쿠키를 유지할 시간(초)
+      c.setMaxAge(24*60*60); // 쿠키를 유지할 시간(초) /0으로 설정 시 무효화
       // domain, path, expire 등 쿠키 구성요소 설정 가능
       // 응답에 쿠키를 추가해 줘야 브라우저에 저장
       resp.addCookie(c);   // 쿠키 추가

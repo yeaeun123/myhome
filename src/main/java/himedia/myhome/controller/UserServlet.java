@@ -36,6 +36,7 @@ public class UserServlet extends BaseServlet {
 			
 		} else if ("loginform".equals(actionName)) {
 			// 로그인 폼
+		
 			// 로그인 실패 상황 -> result=fail
 			String result = req.getParameter("result");
 			if ("fail".equals(result)) {
